@@ -3,10 +3,8 @@
 
 int main()
 {
-	int i=74;
-	float j=73;
-	char a='I';
-	a=j;
-	printf("%c\n",i);
+	int x,y;
+	scanf_s("%d%d",&x,&y);
+	printf("%d",x+y);
 	system("pause");
 }
