@@ -7,15 +7,15 @@ int main()
 	const int n=100;
 	bool a[n];
 	int i,j;
-	for (i=2;i<n;i++)
-	{
+	for (i=1;i<n;i++)
 		a[i]=true;
-		for (j=2;j<=sqrt((float)(i+1));j++)
+	for (i=1;i<n;i++)
+	{
+		if (a[i])
 		{
-			if (((i+1)%j)==0)
+			for (j=2;(i+1)*j-1<n;j++)
 			{
-				a[i]=false;
-				break;
+				a[(i+1)*j-1]=false;
 			}
 		}
 	}
