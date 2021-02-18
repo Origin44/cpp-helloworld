@@ -20,28 +20,28 @@ int main()
 	{
 		s.grade[i]=str[i];
 	}
-	printf("%d",i);
-	s.grade[i++]='\0';
+	s.grade[i]='\0';
 	for (j=0;j<2;j++)
 	{
 		s.department[j]=str[i++];
 	}
-	s.department[i++]='\0';
+	s.department[j]='\0';
 	for (j=0;j<2;j++)
 	{
 		s.major[j]=str[i++];
 	}
-	s.major[i++]='\0';
+	s.major[j]='\0';
 	for (j=0;j<2;j++)
 	{
 		s.cla[j]=str[i++];
 	}
-	s.cla[i++]='\0';
+	s.cla[j]='\0';
 	for (j=0;j<3;j++)
 	{
 		s.number[j]=str[i++];
 	}
-	s.number[i++]='\0';
-	printf("%s%s%s%s%s\n",s.grade,s.department,s.major,s.number);
+	s.number[j]='\0';
+	printf("%s%s%s%s%s\n",s.grade,s.department,s.major,s.cla,s.number);
 	system("pause");
+	return 0;
 }
