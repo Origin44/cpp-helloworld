@@ -3,10 +3,8 @@
 
 int main()
 {
-	int i=74;
-	float j=73;
-	char a='I';
-	a=j;
-	printf("%c\n",i);
+	char nation[2][10];
+	scanf_s("%s",nation[1],11);
+	printf("%s\n",nation[1]);
 	system("pause");
 }
