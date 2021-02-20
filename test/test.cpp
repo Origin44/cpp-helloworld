@@ -3,8 +3,8 @@
 
 int main()
 {
-	char nation[2][10];
-	scanf_s("%s",nation[1],11);
-	printf("%s\n",nation[1]);
+	int i;
+	for (i=0;i<5;i++)
+		printf("%d ",i);
 	system("pause");
 }
