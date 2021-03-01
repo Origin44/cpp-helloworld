@@ -7,34 +7,38 @@ int main()
 	bool flag;
 	char st1[10],st2[50];
 	char *p1=st1,*p2=st2;
-	scanf_s("%s",st2,49);
-	scanf_s("%s",st1,9);
+	gets(st2);
+	gets(st1);
+	for (l1=0;*p1!='\0';l1++,p1++);
 	for (l2=0;*p2!='\0';l2++,p2++);
 	p1=st1;
 	p2=st2;
-	for (i=1;*p1!='\0';i++,p1++)
+	for (i=1;*p2!='\0';i++,p2++)
 	{
 		if (*p1=*p2)
 		{
 			tmp=i;
 			flag=true;
-			for (j=0;j<l2-1;j++)
+			for (j=0;j<l1;j++)
 			{
 				if (*p1!=*p2)
 				{
 					flag=false;
 					break;
 				}
-				p1++;
-				p2++;
-				i++;
+				if ((i<l2)&&(j<l1))
+				{
+					p1++;
+					p2++;
+					i++;
+				}
 			}
 			if (flag)
 			{
 				printf("%d ",tmp);
 				sum++;
 			}
-			p2=st2;
+			p1=st1;
 		}
 	}
 	printf("%d\n",sum);
