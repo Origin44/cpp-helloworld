@@ -3,42 +3,45 @@
 
 int main()
 {
-	int l1,l2,sum=0,i,j,tmp;
+	int sum=0,i,tmp;
 	bool flag;
-	char st1[10],st2[50];
+	char st1[50],st2[10];
 	char *p1=st1,*p2=st2;
-	gets(st2);
 	gets(st1);
-	for (l1=0;*p1!='\0';l1++,p1++);
-	for (l2=0;*p2!='\0';l2++,p2++);
+	gets(st2);
 	p1=st1;
 	p2=st2;
-	for (i=1;*p2!='\0';i++,p2++)
+	for (i=1;*p1!='\0';)
 	{
-		if (*p1=*p2)
+		if (*p1==*p2)
 		{
 			tmp=i;
 			flag=true;
-			for (j=0;j<l1;j++)
+			for (;*p2!='\0';)
 			{
 				if (*p1!=*p2)
 				{
 					flag=false;
 					break;
 				}
-				if ((i<l2)&&(j<l1))
+				p2++;
+				if (*p2!='\0')
 				{
 					p1++;
-					p2++;
 					i++;
 				}
 			}
 			if (flag)
 			{
-				printf("%d ",tmp);
+				printf("%d\n",tmp);
 				sum++;
 			}
-			p1=st1;
+			p2=st2;
+		}
+		else
+		{
+			i++;
+			p1++;
 		}
 	}
 	printf("%d\n",sum);
